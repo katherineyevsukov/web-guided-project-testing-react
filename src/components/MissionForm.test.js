@@ -46,6 +46,8 @@ test("execute getData when button is clicked", ()=> {
 
     //    - Click my button
     userEvent.click(button);
+    userEvent.click(button);
+    userEvent.click(button);
 
     //3. Assert: ?
     console.log(mockGetData.mock);
