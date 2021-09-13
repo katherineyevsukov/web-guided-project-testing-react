@@ -34,15 +34,11 @@ test("renders button when isFetchingData === false", ()=> {
 });
 
 test("execute getData when button is clicked", ()=> {
-    const mockGetData = jest.fn(()=> {
-        return("stuff", Math.random());
-    });
+    const mockGetData = jest.fn(;
 
 
     //1. Arrange: render MissionForm with isFetchingData === true
-    render(<MissionForm isFetchingData={false} getData={()=> {
-        mockGetData(Math.random())
-    }}/>);
+    render(<MissionForm isFetchingData={false} getData={mockGetData}/>);
 
     //2. Act: 
     //    - Find my button
@@ -54,7 +50,7 @@ test("execute getData when button is clicked", ()=> {
     userEvent.click(button);
 
     //3. Assert: ?
-    console.log(mockGetData.mock);
+    mockGetData.mock
     
 });
 
