@@ -77,5 +77,7 @@ test("finds the h1s", ()=> {
     const h1 = within(container).getByText("Space Missions");
  
     const header2 = document.querySelector("#header2");
+    expect(header2).toBeInTheDocument();
+
     console.log(header2);
 })
