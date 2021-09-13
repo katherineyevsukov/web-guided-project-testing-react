@@ -50,6 +50,7 @@ test("execute getData when button is clicked", ()=> {
     //3. Assert: ?
     expect(mockGetData.mock.calls.length).toBe(1);
     expect(mockGetData.mock.calls).toHaveLength(1);
+    expect(mockGetData).toBeCalledTimes(1);
     
 });
 
