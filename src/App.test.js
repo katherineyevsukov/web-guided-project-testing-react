@@ -14,14 +14,16 @@ test("when button is clicked, 3 missions are displayed", async ()=> {
     fetchMissions.mockResolvedValueOnce({
         data:[
             {
-                mission_name: 'Thaicom',
-                mission_id: '9D1B7E0',
-                manufacturers: [Array],
-                payload_ids: [Array],
-                wikipedia: 'https://en.wikipedia.org/wiki/Thaicom',
-                website: 'http://www.thaicom.net/en/satellites/overview',
-                twitter: 'https://twitter.com/thaicomplc',
-                description: 'Thaicom is the name of a series of communications satellites operated from Thailand, and also the name of Thaicom Public Company Limited, which is the company that owns and operates the Thaicom satellite fleet and other telecommunication businesses in Thailand and throughout the Asia-Pacific region. The satellite projects were named Thaicom by the King of Thailand, His Majesty the King Bhumibol Adulyadej, as a symbol of the linkage between Thailand and modern communications technology.'
+                mission_name: 'Mission 1',
+                mission_id: '1'
+            },
+            {
+                mission_name: 'Mission 2',
+                mission_id: '2'
+            },
+            {
+                mission_name: 'Mission 23',
+                mission_id: '3'
             }
         ]
     });
@@ -39,5 +41,5 @@ test("when button is clicked, 3 missions are displayed", async ()=> {
     //  find all mission items
     const missions = await screen.findAllByTestId('mission');
     //  there should be 10
-    expect(missions).toHaveLength(10);
+    expect(missions).toHaveLength(3);
 });
