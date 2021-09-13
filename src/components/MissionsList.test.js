@@ -4,4 +4,5 @@ import MissionsList from './MissionsList';
 
 test("renders without errors", () => {
     render(<MissionsList missions={[]}/>);
-})
+});
+
