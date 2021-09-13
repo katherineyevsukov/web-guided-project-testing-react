@@ -25,7 +25,11 @@ test("renders loading message when isFetchingData === true", ()=> {
 test("renders button when isFetchingData === false", ()=> {
     render(<MissionForm isFetchingData={false}/>);
 
-    
+    const loadingStatement = screen.queryByText(/we are fetching data/i);
+    const button = screen.queryByRole("button");
+
+    expect(loadingStatement).not.toBeInTheDocument();
+    expect(button).toBeInTheDocument();
 });
 
 test("execute getData when button is clicked", ()=> {
