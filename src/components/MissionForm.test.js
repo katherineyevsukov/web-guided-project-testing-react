@@ -34,7 +34,9 @@ test("renders button when isFetchingData === false", ()=> {
 });
 
 test("execute getData when button is clicked", ()=> {
-    const mockGetData = jest.fn();
+    const mockGetData = jest.fn(()=> {
+        return("stuff")
+    });
 
 
     //1. Arrange: render MissionForm with isFetchingData === true
