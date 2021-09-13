@@ -8,5 +8,11 @@ test("renders without errors", ()=> {
 });
 
 test("when button is clicked, 3 missions are displayed", ()=> {
-    
+    //Arrange: Renders App
+    //Act:
+    // - Find button
+    // - Click button
+    //Asset:
+    //  find all mission items
+    //  there should be 10
 });
