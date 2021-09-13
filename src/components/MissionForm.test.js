@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import MissionForm from './MissionForm';
 
 test("renders without an error", ()=> {
@@ -34,10 +35,14 @@ test("renders button when isFetchingData === false", ()=> {
 
 test("execute getData when button is clicked", ()=> {
     //1. Arrange: render MissionForm with isFetchingData === true
-    render(<MissionForm isFetchingData={true}/>)
+    render(<MissionForm isFetchingData={true}/>);
+
     //2. Act: 
     //    - Find my button
+    const button = screen.queryByRole("button");
     //    - Click my button
+    userEvent.click(button);
+
     //3. Assert: ?
 });
 
