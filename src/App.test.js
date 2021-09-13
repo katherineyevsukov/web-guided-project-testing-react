@@ -1,5 +1,5 @@
 import React from 'react';
-import {screen, render} from '@testing-library/react';
+import {screen, render, within} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from './App';
 
@@ -73,5 +73,6 @@ test("when button is clicked, 3 missions are displayed", async ()=> {
 
 test("finds the h1s", ()=> {
     render(<App/>);
-    const h1 = screen.getByText("Space Missions");
+    const container = screen.getByTestId("container");
+    // const h1 = screen.getByText("Space Missions");
 })
