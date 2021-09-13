@@ -35,7 +35,7 @@ test("renders button when isFetchingData === false", ()=> {
 
 test("execute getData when button is clicked", ()=> {
     const mockGetData = jest.fn(()=> {
-        return("stuff")
+        return("stuff", Math.random());
     });
 
 
