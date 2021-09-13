@@ -3,13 +3,19 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import MissionForm from './MissionForm';
 
+
+const baseRender = (isFetchingData)=> {
+    render(<MissionForm isFetchingData={isFetchingData}/>);
+}
+
 test("renders without an error", ()=> {
-    render(<MissionForm/>);
+    baseRender(true);
 });
 
 test("renders loading message when isFetchingData === true", ()=> {
     //1. Arrange; Render our component
-    render(<MissionForm isFetchingData={true}/>);
+    // render(<MissionForm isFetchingData={true}/>);
+    baseRender(true);
 
     //2. Act: find "we are fetching data" statement
     const loadingStatement = screen.queryByText(/we are fetching data/i);
@@ -24,7 +30,8 @@ test("renders loading message when isFetchingData === true", ()=> {
 });
 
 test("renders button when isFetchingData === false", ()=> {
-    render(<MissionForm isFetchingData={false}/>);
+    // render(<MissionForm isFetchingData={false}/>);
+    baseRender(false);
 
     const loadingStatement = screen.queryByText(/we are fetching data/i);
     const button = screen.queryByRole("button");
@@ -35,7 +42,7 @@ test("renders button when isFetchingData === false", ()=> {
 
 test("execute getData when button is clicked", ()=> {
     const mockGetData = jest.fn();
-    
+
     //1. Arrange: render MissionForm with isFetchingData === true
     render(<MissionForm isFetchingData={false} getData={mockGetData}/>);
 
