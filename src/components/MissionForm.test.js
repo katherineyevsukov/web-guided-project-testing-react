@@ -46,11 +46,10 @@ test("execute getData when button is clicked", ()=> {
 
     //    - Click my button
     userEvent.click(button);
-    userEvent.click(button);
-    userEvent.click(button);
 
     //3. Assert: ?
-    expect(mockGetData.mock.calls.length).toBe(3);
+    expect(mockGetData.mock.calls.length).toBe(1);
+    expect(mockGetData.mock.calls).toHaveLength(1);
     
 });
 
