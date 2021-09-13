@@ -25,9 +25,10 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Space Missions</h1>
+      <h1 id="header1">Space Missions</h1>
+      
       <div data-testid="container">
-        <h1>Space Missions</h1>
+        <h1 id="header2">Space Missions</h1>
       </div>
       
 

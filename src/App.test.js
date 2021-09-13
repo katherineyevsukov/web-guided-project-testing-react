@@ -74,5 +74,6 @@ test("when button is clicked, 3 missions are displayed", async ()=> {
 test("finds the h1s", ()=> {
     render(<App/>);
     const container = screen.getByTestId("container");
-    // const h1 = screen.getByText("Space Missions");
+    const h1 = within(container).getByText("Space Missions");
+    console.log(h1);
 })
