@@ -6,3 +6,15 @@ test("renders without errors", () => {
     render(<MissionsList missions={[]}/>);
 });
 
+test("renders new tests when passed into component", () => {
+    //Arrange 1: renders MissionsList with no missions
+    render(<MissionsList missions={[]}/>)
+    //Act 1: gets the missions from our component
+    const missions = screen.getByAllTestId('mission');
+    
+    //Assert 1: checks that no missions are on the screen
+
+    //Arrange 2: renders MissionsList with 3 missions
+    //Act 2: gets the missions from our component
+    //Assert 2: checks that 3 missions are on the screen.
+})
