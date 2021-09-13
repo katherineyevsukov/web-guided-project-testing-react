@@ -70,3 +70,8 @@ test("when button is clicked, 3 missions are displayed", async ()=> {
     //  there should be 10
     expect(missions).toHaveLength(3);
 });
+
+test("finds the h1s", ()=> {
+    render(<App/>);
+    const h1 = screen.getByText("Space Missions");
+})
