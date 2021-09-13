@@ -33,6 +33,11 @@ test("renders button when isFetchingData === false", ()=> {
 });
 
 test("execute getData when button is clicked", ()=> {
-
+    //1. Arrange: render MissionForm with isFetchingData === true
+    render(<MissionForm isFetchingData={true}/>)
+    //2. Act: 
+    //    - Find my button
+    //    - Click my button
+    //3. Assert: ?
 });
 
