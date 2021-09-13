@@ -30,6 +30,30 @@ test("when button is clicked, 3 missions are displayed", async ()=> {
             }
         ]
     });
+
+    // fetchMissions = jest.fn(()=>{
+    //     return( new Promise((resolve=> {
+    //         resolve(
+    //             {
+    //                 data:[
+    //                     {
+    //                         mission_name: 'Mission 1',
+    //                         mission_id: '1'
+    //                     },
+    //                     {
+    //                         mission_name: 'Mission 2',
+    //                         mission_id: '2'
+    //                     },
+    //                     {
+    //                         mission_name: 'Mission 23',
+    //                         mission_id: '3'
+    //                     }
+    //                 ]
+    //             }
+    //         )
+    //     })))
+    // })
+
     
     //Arrange: Renders App
     render(<App/>);
