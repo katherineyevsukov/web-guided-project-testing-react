@@ -30,5 +30,7 @@ test("renders new tests when passed into component", () => {
     //Arrange 2: renders MissionsList with 3 missions
     rerender(<MissionsList missions={testMissions}/>);
     //Act 2: gets the missions from our component
+    missions = screen.queryAllByTestId('mission');
     //Assert 2: checks that 3 missions are on the screen.
+    expect(missions).toHaveLength(2);
 })
