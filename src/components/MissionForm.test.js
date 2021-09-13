@@ -16,7 +16,10 @@ test("renders loading message when isFetchingData === true", ()=> {
     
     //3. Assert: Confirm that loading statement exists.
     expect(loadingStatement).toBeInTheDocument();
-    expect(button).not.toBeInTheDocument();
+    // expect(button).not.toBeInTheDocument();
+    expect(button).toBeNull();
+    expect(button).toBeFalsy();
+    expect(button).not.toBeTruthy();
 });
 
 test("renders button when isFetchingData === false", ()=> {
