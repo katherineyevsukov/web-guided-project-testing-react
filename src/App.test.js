@@ -14,12 +14,12 @@ test("when button is clicked, 3 missions are displayed", ()=> {
     //Act:
     // - Find button
     const button = screen.getByRole("button");
-    console.log(button);
     // - Click button
     userEvent.click(button);
 
     //Asset:
     //  find all mission items
-    const 
+    const missions = screen.queryAllByTestId('mission');
     //  there should be 10
+    expect(missions).toHaveLength(10);
 });
