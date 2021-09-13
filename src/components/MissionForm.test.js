@@ -34,8 +34,12 @@ test("renders button when isFetchingData === false", ()=> {
 });
 
 test("execute getData when button is clicked", ()=> {
+    const fakeFunction = ()=> {
+        console.log("Executed fakeness!!!");
+    }
+
     //1. Arrange: render MissionForm with isFetchingData === true
-    render(<MissionForm isFetchingData={false}/>);
+    render(<MissionForm isFetchingData={false} getData={fakeFunction}/>);
 
     //2. Act: 
     //    - Find my button
