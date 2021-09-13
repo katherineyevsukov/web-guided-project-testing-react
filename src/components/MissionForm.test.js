@@ -23,6 +23,8 @@ test("renders loading message when isFetchingData === true", ()=> {
 });
 
 test("renders button when isFetchingData === false", ()=> {
+    render(<MissionForm isFetchingData={false}/>);
+
     
 });
 
