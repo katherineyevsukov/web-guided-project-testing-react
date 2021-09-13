@@ -7,12 +7,10 @@ import { fetchMissions } from './api/fetchMissions';
 jest.mock('./api/fetchMissions');
 
 
-const baseRender = ()=> {
-    render(<App/>);
-}
+render(<App/>);
 
 test("renders without errors", ()=> {
-    baseRender();
+    
 });
 
 test("when button is clicked, 3 missions are displayed", async ()=> {
@@ -34,7 +32,7 @@ test("when button is clicked, 3 missions are displayed", async ()=> {
     });
     
     //Arrange: Renders App
-    baseRender();
+    // render(<App/>);
 
     //Act:
     // - Find button
