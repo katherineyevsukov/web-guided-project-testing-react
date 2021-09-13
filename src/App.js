@@ -14,6 +14,8 @@ export default function App() {
     setIsFetchingData(true);
     fetchMissions()
       .then(res => {
+        console.log(res);
+        
         setIsFetchingData(false);
         setMissions(res.data);
       })
@@ -22,7 +24,7 @@ export default function App() {
         setError(err.message);
       });
   };
-  
+
   return (
     <div className="App">
       <h1>Space Missions</h1>
