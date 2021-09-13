@@ -23,7 +23,7 @@ test("renders loading message when isFetchingData === true", ()=> {
 });
 
 test("renders button when isFetchingData === false", ()=> {
-
+    
 });
 
 test("execute getData when button is clicked", ()=> {
