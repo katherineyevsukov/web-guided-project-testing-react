@@ -7,7 +7,7 @@ test("renders without errors", ()=> {
     render(<App/>);
 });
 
-test("when button is clicked, 3 missions are displayed", async()=> {
+test("when button is clicked, 3 missions are displayed", async ()=> {
     //Arrange: Renders App
     render(<App/>);
 
