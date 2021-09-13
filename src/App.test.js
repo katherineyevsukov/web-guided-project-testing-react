@@ -75,5 +75,7 @@ test("finds the h1s", ()=> {
     render(<App/>);
     const container = screen.getByTestId("container");
     const h1 = within(container).getByText("Space Missions");
-    console.log(h1);
+ 
+    const header2 = document.querySelector("#header2");
+    console.log(header2);
 })
