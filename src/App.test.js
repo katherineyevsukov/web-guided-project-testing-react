@@ -7,7 +7,7 @@ test("renders without errors", ()=> {
     render(<App/>);
 });
 
-test("when button is clicked, 3 missions are displayed", ()=> {
+test("when button is clicked, 3 missions are displayed", async()=> {
     //Arrange: Renders App
     render(<App/>);
 
@@ -19,7 +19,7 @@ test("when button is clicked, 3 missions are displayed", ()=> {
 
     //Asset:
     //  find all mission items
-    const missions = screen.queryAllByTestId('mission');
+    const missions = await screen.findAllByTestId('mission');
     //  there should be 10
     expect(missions).toHaveLength(10);
 });
