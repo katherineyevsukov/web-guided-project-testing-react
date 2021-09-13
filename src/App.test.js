@@ -19,10 +19,7 @@ test("when button is clicked, 3 missions are displayed", async ()=> {
 
     //Asset:
     //  find all mission items
-    setTimeout(()=> {
-        const missions = screen.queryAllByTestId('mission');
-        //  there should be 10
-        expect(missions).toHaveLength(10);
-    }, 10);
-    
+    const missions = await screen.findAllByTestId('mission');
+    //  there should be 10
+    expect(missions).toHaveLength(10);
 });
