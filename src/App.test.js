@@ -79,5 +79,6 @@ test("finds the h1s", ()=> {
     const header2 = document.querySelector("#header2");
     expect(header2).toBeInTheDocument();
 
-    console.log(header2);
+    console.log(header2.className);
+    expect(header2.className).toBe("myClass");
 })
