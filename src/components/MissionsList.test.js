@@ -8,7 +8,7 @@ test("renders without errors", () => {
 
 test("renders new tests when passed into component", () => {
     //Arrange 1: renders MissionsList with no missions
-    const renderStuff = render(<MissionsList missions={[]}/>)
+    const { rerender } = render(<MissionsList missions={[]}/>)
     //Act 1: gets the missions from our component
     let missions = screen.queryAllByTestId('mission');
 
@@ -16,7 +16,7 @@ test("renders new tests when passed into component", () => {
     expect(missions).toHaveLength(0);
 
     console.log(renderStuff);
-    
+
     //Arrange 2: renders MissionsList with 3 missions
     //Act 2: gets the missions from our component
     //Assert 2: checks that 3 missions are on the screen.
