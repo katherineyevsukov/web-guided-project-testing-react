@@ -13,9 +13,10 @@ test("renders loading message when isFetchingData === true", ()=> {
     //2. Act: find "we are fetching data" statement
     const loadingStatement = screen.queryByText(/we are fetching data/i);
     const button = screen.queryByRole("button");
-    console.log(button);
+    
     //3. Assert: Confirm that loading statement exists.
     expect(loadingStatement).toBeInTheDocument();
+    expect(button).not.toBeInTheDocument();
 });
 
 test("renders button when isFetchingData === false", ()=> {
